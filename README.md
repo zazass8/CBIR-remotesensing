@@ -1,0 +1,3 @@
+This project intends to implement a Content-based Image Retrieval (CBIR) system used for image classification and object detection. The aim of this task is to compare several pre-trained CNN architectures to be fine-tuned with several dataset and to explore its capabilities with differences in spatial resolution.
+
+The CBIR is designed to be composed to include feature representation, feature indexing and feature similarity matching. The framework begins by fine-tuning remote sensing datasets on EfficientNet and ResNet, that are used to extract features. In addtion, these features are stored in an image database, known as KD-tree, that is used to implement search and retrieval when a query image comes in place.
