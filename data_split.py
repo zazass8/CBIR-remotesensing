@@ -13,11 +13,11 @@ import numpy as np
 import pandas as pd
 
 # Split the dataset into training, validation, test
-def train_val_test_split():
+def train_val_test_split(path):
     _datasets = ["FAIR1M_partial", "RESISC45_partial", "Sentinel2_partial"]
     for dataset in _datasets:
-        preprocess_dir = os.path.join("/Users/constantinosazas/CV_ML_Assignment/data_preprocessed", dataset + "/")
-        data_dir = os.path.join("/Users/constantinosazas/CV_ML_Assignment/interview_datasets", dataset + "/")
+        preprocess_dir = os.path.join(path + "data_preprocessed", dataset + "/")
+        data_dir = os.path.join(path + "interview_datasets", dataset + "/")
         labels = [label for label in os.listdir(data_dir)[1:] if not label.endswith("labels")]
         sub_directories = [data_dir + label + "/" for label in labels]
 
